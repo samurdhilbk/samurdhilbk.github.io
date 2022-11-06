@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<!-- Site Properties -->
+	<title>Fundraiser for Pera COM</title>
+	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/semantic.min.js"></script>
+	<script>
+		$(document)
+			.ready(function () {
+
+				$('#progress').progress('increment');
+
+				$('.ui.accordion').accordion({
+					exclusive: false
+				});
+				// fix menu when passed
+				$('.masthead')
+					.visibility({
+						once: false,
+						onBottomPassed: function () {
+							$('.fixed.menu').transition('fade in');
+						},
+						onBottomPassedReverse: function () {
+							$('.fixed.menu').transition('fade out');
+						}
+					})
+					;
+
+				// create sidebar and attach to menu open
+				$('.ui.sidebar')
+					.sidebar('attach events', '.toc.item')
+					;
+
+			})
+			;
+	</script>
+</head>
+
+<body id="home">
+
+	<!-- Following Menu -->
+	<div class="ui large top fixed hidden menu">
+		<div class="ui container">
+			<a href="#home" class="item">Home</a>
+			<a href="#faq" class="item">FAQ</a>
+			<a href="#contact" class="item">Contact</a>
+			<div class="right menu">
+				<div class="item">
+					<a class="ui primary button">Donate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sidebar Menu -->
+	<div class="ui vertical inverted sidebar menu">
+		<a href="#home" class="item">Home</a>
+		<a href="#faq" class="item">FAQ</a>
+		<a href="#contact" class="item">Contact</a>
+	</div>
+
+
+	<!-- Page Contents -->
+	<div class="pusher">
+		<div class="ui inverted vertical masthead center aligned segment" style="background-image: linear-gradient(0deg, rgb(0 0 0 / 76%), rgb(2 0 0 / 30%)), url(assets/images/bg-min.png);">
+
+			<div class="ui container">
+				<div class="ui large secondary inverted pointing menu">
+					<a class="toc item">
+						<i class="sidebar icon"></i>
+					</a>
+					<a href="#home" class="item" style="font-weight: bold; color: white !important;">Home</a>
+					<a href="#faq" class="item" style="font-weight: bold; color: white !important;">FAQ</a>
+					<a href="#contact" class="item" style="font-weight: bold; color: white !important;">Contact</a>
+					<div class="right item">
+						<a class="ui inverted button">Donate</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="ui text container">
+				<h1 class="ui inverted header">
+					Help acquire GPU resources for Pera COM
+				</h1>
+				<div class="ui basic segment">
+					<div id="progress" class="ui indicating progress" data-percent="0">
+						<div class="bar"></div>
+						<div class="label" style="color: white">0% Funded. 30 days remaining.</div>
+					  </div>
+				</div>
+				
+				<div class="ui huge primary button">Donate<i class="right arrow icon"></i></div>
+			</div>
+
+		</div>
+
+		<div class="ui vertical stripe segment">
+			<div class="ui middle aligned stackable grid container">
+				<div class="row">
+					<div class="center aligned column">
+						<h1 class="ui segment-header header">Why we need funds?</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="five wide column">
+						<h3 class="ui header">AI/ML projects are still growing</h3>
+						<p>With advances in AI and Machine Learning (ML) ever-expanding, more and more student &
+							faculty-led
+							research projects utilize some avenue of deep learning (DL). In fact 11 (out of 20 total)
+							2022 final year
+							projects utilize ML.</p>
+					</div>
+					<div class="five wide column">
+						<h3 class="ui header">GPU resources are outdated</h3>
+						<p>The department still only has an NVIDIA Tesla C2075 GPU and an NVIDIA Tesla K40 GPU; these
+							extremely
+							outdated GPUs are barely able to keep up with the demands of today's complicated (and large)
+							DL models.
+						</p>
+						</p>
+					</div>
+					<div class="five wide column">
+						<h3 class="ui header">Compromises are made</h3>
+						<p>Students & faculty have had to make do with free tools like Google Colab which only offers
+							older GPUs in
+							the free tier and has restrictions like time-limits for sessions.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="center aligned column">
+						<div class="ui statistic">
+							<div class="value">
+								11 / 20
+							</div>
+							<div class="label">
+								Final year projects utilize ML
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="center aligned column">
+						<a class="ui huge green button" href="https://projects.ce.pdn.ac.lk/4yp/e16/" target="_blank">Check Them Out <i
+								class="right external square alternate icon"></i> </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui vertical stripe segment">
+
+			<div class="ui centered grid container">
+
+				<div class="row">
+					<div class="center aligned column">
+						<h1 class="ui segment-header header">Fundraising milestones & proposed purchase(s)</h1>
+						<p>After evaluating the computer hardware that the department already owns and the
+							cost-to-performance
+							ratio, it has been proposed to make the following purchase(s) subject to the amount of funds
+							that can be
+							raised, <b>within 30 days</b>:</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="center aligned column">
+						<h2 class="ui header"><img class="ui avatar image" src="assets/images/flag.png">Milestones</h1>
+					</div>
+				</div>
+
+				<div class="ui centered grid">
+					<div class="column">
+						<div class="ui vertical steps">
+							<div class="completed step">
+								<img class="ui tiny image" src="assets/images/one.png">
+								<div class="content">
+									<div class="title">
+										<div class="ui horizontal statistic">
+											<div class="value">
+												$1000
+											</div>
+											<div class="label">
+												raised
+											</div>
+										</div>
+									</div>
+									<div class="description">
+										<div class="ui large basic label">
+											NVIDIA GeForce RTX 3090 Ti GPU
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="completed step">
+								<img class="ui tiny image" src="assets/images/two.png">
+								<div class="content">
+									<div class="title">
+										<div class="ui horizontal statistic">
+											<div class="value">
+												$1800
+											</div>
+											<div class="label">
+												raised
+											</div>
+										</div>
+									</div>
+									<div class="description">
+										<div class="ui large vertical basic labels">
+											<div class="ui basic label">NVIDIA GeForce RTX 3090 Ti GPU</div>
+											<div class="ui basic label">Intel Core i7-13700K CPU</div>
+											<div class="ui basic label">NZXT Kraken X53 CPU cooler</div>
+											<div class="ui basic label">MSI MPG Z690 EDGE WIFI Motherboard</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="completed step">
+								<img class="ui tiny image" src="assets/images/three.png">
+								<div class="content">
+									<div class="title">
+										<div class="ui horizontal statistic">
+											<div class="value">
+												$2000
+											</div>
+											<div class="label">
+												raised
+											</div>
+										</div>
+									</div>
+									<div class="description">
+										<div class="ui large vertical basic labels">
+											<div class="ui basic label">NVIDIA GeForce RTX 3090 Ti GPU</div>
+											<div class="ui basic label">Intel Core i9-13900K CPU</div>
+											<div class="ui basic label">NZXT Kraken X53 CPU cooler</div>
+											<div class="ui basic label">MSI MPG Z690 EDGE WIFI Motherboard</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="ui vertical stripe segment">
+
+			<div class="ui middle aligned grid container">
+
+				<div class="row">
+					<div class="center aligned column">
+						<h1 class="ui segment-header header">How you can contribute</h1>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="ui text container">
+						<p>
+							We plan to collect funds mainly through the following PayPal fundraiser <include link to
+								PayPal fundraiser> since it offers
+						</p>
+						<div class="ui bulleted list">
+							<div class="item">Zero transaction fees for domestic (within US) donations</div>
+							<div class="item">Low transaction of %1.5 + fixed cost for international donations</div>
+						</div>
+						<p>
+							All funds will be collected to Samurdhi’s personal account(s). All donors will receive a
+							receipt.
+						</p>
+						<p>
+							Additionally, we are prepared to accept direct donations through bank transfer/Venmo/Zelle
+							(details will
+							be provided upon request)
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="ui vertical stripe segment">
+
+			<div class="ui middle aligned grid container">
+
+				<div class="row">
+					<div class="center aligned column">
+						<h1 class="ui segment-header header">Who is involved?</h1>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="ui text container">
+						<p>
+							The fundraising effort is led by Samurdhi and Gihan, both Pera COM graduates currently based
+							in the US.
+						</p>
+						<div class="ui two stackable cards">
+							<div class="card">
+								<div class="content">
+									<a href="https://www.linkedin.com/in/samurdhilbk/" target="_blank"><i
+											class="right floated large linkedin icon" style="color:#0e76a8;"></i></a>
+									<div class="header">Samurdhi Karunaratne</div>
+									<div class="meta">E/13 batch</div>
+									<div class="description">
+										<div class="ui bulleted list">
+											<div class="item">Currently, Deep Learning Software Engineer @ NVIDIA (Santa
+												Clara, USA)</div>
+											<div class="item">BSc Computer Engineering, UOP (2019) | MS Elec. & Comp.
+												Engineering, University
+												of California, Los Angeles (UCLA, 2021)</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="content">
+									<a href="https://www.linkedin.com/in/gihanjayatilaka/" target="_blank"><i
+											class="right floated large linkedin icon" style="color:#0e76a8;"></i></a>
+									<div class="header">Gihan Jayatilaka</div>
+									<div class="meta">E/14 batch</div>
+									<div class="description">
+										<div class="ui bulleted list">
+											<div class="item">Currently, Computer Science PhD student at the University
+												of Maryland, (College
+												Park, USA)</div>
+											<div class="item">BSc Computer Engineering, UOP (2020)</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="ui text container">
+						<p>
+							Prof. Roshan Ragel, Head of the Department of Computer Engineering, UOP acknowledges the
+							fundraising
+							effort and has informed us of the department’s current needs and resources.
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div id="faq" class="ui vertical stripe segment">
+
+			<div class="ui centered grid container">
+
+				<div class="row">
+					<div class="center aligned column">
+						<h1 class="ui segment-header header">FAQ</h1>
+					</div>
+				</div>
+
+				<div class="ui centered grid">
+					<div class="column">
+						<div class="ui fluid styled accordion">
+							<div class="title">
+								<i class="dropdown icon"></i>
+								How can I contact the organizers?
+							</div>
+							<div class="content">
+								<p class="transition hidden">
+								<div class="ui bulleted list">
+									<div class="item">
+										Samurdhi <br>
+										<img class="ui image" src="assets/images/capture-s-c.png">
+									</div>
+									<div class="item">
+										Gihan <br>
+										<img class="ui image" src="assets/images/capture-g-c.png">
+									</div>
+								</div>
+								</p>
+							</div>
+							<div class="title">
+								<i class="dropdown icon"></i>
+								How will the purchase and delivery of the equipment take place?
+							</div>
+							<div class="content">
+								<p>Upon the completion of Milestone 1, Samurdhi will purchase the NVIDIA RTX 3090 Ti
+									GPU. If there is
+									more time left in the fundraiser, it will be held to see whether Milestone 2 or
+									Milestone 3 can be
+									reached; if Milestone 2/Milestone 3 is reached, the rest of the parts will be
+									purchased accordingly.
+									If Milestone 1 is not reached within 30 days, the fundraiser will be renewed for
+									another 30 days.
+								</p>
+								<p>
+									The purchased equipment will be hand-delivered to the department by one or more
+									US-based alumni
+									traveling to Sri Lanka before the end of 2022.
+								</p>
+							</div>
+							<div class="title">
+								<i class="dropdown icon"></i>
+								How much should I donate?
+							</div>
+							<div class="content">
+								<p>However much you can! There is no minimum donation, so donate within your means.
+								</p>
+							</div>
+							<div class="title">
+								<i class="dropdown icon"></i>
+								What will happen to the any excess donations (if any)?
+							</div>
+							<div class="content">
+								<p>Depending on the amount of excess donations, they may be:
+								<div class="ui bulleted list">
+									<div class="item">Used to acquire additional upgrades such as RAM, storage, cooling
+										etc. </div>
+									<div class="item">Donated to the donated to the department to be used at their
+										discretion</div>
+								</div>
+								</p>
+								<p>
+									Before any of these actions are taken, all donors will be notified in advance.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="contact" class="ui inverted vertical footer segment" style="background: black;">
+			<div class="ui container">
+				<div class="ui stackable inverted divided equal height stackable grid">
+					<div class="five wide column">
+						<h4 class="ui inverted header">Contact</h4>
+								Samurdhi <br>
+								<img class="ui large image" src="assets/images/capture-s-c-n.png">
+								Gihan <br>
+								<img class="ui image" src="assets/images/capture-g-c-n.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
