@@ -25,17 +25,17 @@
 				});
 
 
-				
+
 
 				$('#progress').progress({
 					text: {
-					active  : '{percent}% Funded (${value}). 29 days remaining.'
+						active: '{percent}% Funded (${value}). 25 days remaining.'
 					}
 				});
 
 				$('#progress').progress('increment');
 
-				
+
 
 				$('.ui.accordion').accordion({
 					exclusive: false
@@ -112,12 +112,14 @@
 					Help acquire GPU resources for Pera COM
 				</h1>
 				<div class="ui basic segment">
-					<div id="progress" class="ui indicating progress" data-value="315" data-total="2000">
+					<div id="progress" class="ui indicating progress" data-value="1070" data-total="2300">
 						<div class="bar"></div>
-						<div class="label" style="color: white">{percent}% Funded. 29 days remaining.</div>
+						<div class="label" style="color: white">{percent}% Funded. 25 days remaining.</div>
 					</div>
+					<a href="#updates" class="ui inverted basic button">See updates <i class="right icon"><i class="down chevron circle icon"></i></i></a>
 				</div>
 
+				
 				<a class="ui huge primary button" href="#contribute">Donate<i class="right arrow icon"></i></a>
 			</div>
 
@@ -201,8 +203,8 @@
 				<div class="ui centered grid">
 					<div class="column">
 						<div class="ui vertical steps">
-							<div class="completed step">
-								<img class="ui tiny image" src="assets/images/one.png">
+							<div class="completed done step">
+								<img class="ui tiny image" src="assets/images/accept.png">
 								<div class="content">
 									<div class="title">
 										<div class="ui horizontal statistic">
@@ -227,7 +229,7 @@
 									<div class="title">
 										<div class="ui horizontal statistic">
 											<div class="value">
-												$1800
+												$2000
 											</div>
 											<div class="label">
 												raised
@@ -250,7 +252,7 @@
 									<div class="title">
 										<div class="ui horizontal statistic">
 											<div class="value">
-												$2000
+												$2300
 											</div>
 											<div class="label">
 												raised
@@ -296,11 +298,11 @@
 									<div class="ui basic segment" style="text-align: center;">
 										<a class="ui huge blue button" href="https://www.paypal.com/pools/c/8OMErR3Vhy"
 											target="_blank">Donate <i class="right paypal icon"></i> </a>
-											<div class="ui compact warning message">
-												If you don't want your name and donation amount to appear on the fundraiser
-												page, please check the box that says "Don’t share my name publicly"
-												when donating
-											</div>
+										<div class="ui compact warning message">
+											If you don't want your name and donation amount to appear on the fundraiser
+											page, please check the box that says "Don’t share my name publicly"
+											when donating
+										</div>
 									</div>
 								</div>
 								<div class="extra content">
@@ -314,7 +316,8 @@
 								</div>
 								<div class="content" style="font-size: 1.2em;">
 									We are prepared to accept direct donations through bank transfer/Venmo/Zelle. Fill
-									<a href="https://forms.gle/NDUTm2n7v3nWgAEW9" target="_blank">this Google form</a> to get payment details sent to you.
+									<a href="https://forms.gle/NDUTm2n7v3nWgAEW9" target="_blank">this Google form</a>
+									to get payment details sent to you.
 								</div>
 								<!-- <div class="extra content">
 									<a class="ui link" href="#"><i class="info circle icon"></i>Transaction fees with
@@ -330,9 +333,12 @@
 					<div class="content">
 						Donor fees:
 						<div class="ui bulleted list">
-							<div class="item">Zero fees for domestic (within US) donations from bank accounts or Paypal balance</div>
+							<div class="item">Zero fees for domestic (within US) donations from bank accounts or Paypal
+								balance</div>
 							<div class="item">2.9% + $0.30 for US donations from credit/debit card</div>
-							<div class="item">International: Please refer to <a href="https://www.paypal.com/webapps/mpp/paypal-fees">https://www.paypal.com/webapps/mpp/paypal-fees</a></div>
+							<div class="item">International: Please refer to <a
+									href="https://www.paypal.com/webapps/mpp/paypal-fees">https://www.paypal.com/webapps/mpp/paypal-fees</a>
+							</div>
 						</div>
 						Receiver fees:
 						<div class="ui bulleted list">
@@ -423,6 +429,70 @@
 
 			</div>
 
+		</div>
+
+
+		<div id="updates" class="ui vertical stripe segment">
+
+			<div class="ui centered grid container">
+
+				<div class="row">
+					<div class="center aligned column">
+						<h1 class="ui segment-header header">Updates</h1>
+					</div>
+				</div>
+
+				<div class="ui centered grid">
+
+
+					<div class="doubling two column centered row">
+						<div class="column">
+
+							<div class="ui segment" style="height: 100%;">
+								<div class="ui feed">
+									<div class="current event">
+										<div class="content">
+											<div class="date">
+												November 11, 2022 </div>
+											<div class="summary">
+												<p>We purchased an NVIDIA RTX 3090 Ti GPU! Awaiting delivery... </p>
+											</div>
+										</div>
+									</div>
+
+									<div class=" event">
+										<div class="content">
+											<div class="date">
+												November 10, 2022 </div>
+											<div class="summary">
+												<p>We bumped our milestones by roughly 10% to account for
+													taxes, and costs related to shipping within the US and ultimately to
+													SL.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class=" event">
+										<div class="content">
+											<div class="date">
+												November 8, 2022 </div>
+											<div class="summary">
+												<p>We reached our first milestone of $1000!
+												</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
 		</div>
 
 
