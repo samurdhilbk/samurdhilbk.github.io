@@ -25,11 +25,13 @@
 				});
 
 
-
+				$("#launch-fundraiser-modal").click(function () {
+					$('#fundraiser-modal').modal('show');
+				});
 
 				$('#progress').progress({
 					text: {
-						active: '{percent}% Funded (${value}). 19 days remaining.'
+						active: '{percent}% Funded (${value}). 14 days remaining.'
 					}
 				});
 
@@ -112,9 +114,9 @@
 					Help acquire GPU resources for Pera engineering
 				</h1>
 				<div class="ui basic segment">
-					<div id="progress" class="ui indicating progress" data-value="2345" data-total="3200">
+					<div id="progress" class="ui indicating progress" data-value="3111" data-total="3200">
 						<div class="bar"></div>
-						<div class="label" style="color: white">{percent}% Funded. 19 days remaining.</div>
+						<div class="label" style="color: white">{percent}% Funded. 14 days remaining.</div>
 					</div>
 					<a href="#updates" class="ui inverted basic button">See updates <i class="right icon"><i
 								id="down-arrow" class="down chevron circle icon"></i></i></a>
@@ -122,6 +124,11 @@
 
 
 				<a class="ui huge primary button" href="#contribute">Donate<i class="right arrow icon"></i></a>
+
+				<div class="ui basic segment">
+				<a href="#raffle" class="ui inverted blue button">Every donor has a chance to win Warhammer Darktide 40k!<i class="right icon"><i
+					id="down-arrow" class="down chevron circle icon"></i></i></a>
+				</div>
 			</div>
 
 		</div>
@@ -182,20 +189,20 @@
 
 					<div class="column">
 
-							<div class="ui small statistic">
-								<div class="value">
-									Team Spectra
-								</div>
-								<div class="label">
-									Applied AI/ML research group from EE
-								</div>
+						<div class="ui small statistic">
+							<div class="value">
+								Team Spectra
 							</div>
-						
+							<div class="label">
+								Applied AI/ML research group from EE
+							</div>
+						</div>
 
-							<a class="ui huge green button" href="https://spectra.eng.pdn.ac.lk/" target="_blank"
-								style="display: block;">Team Spectra <i
-									class="right external square alternate icon"></i> </a>
-					
+
+						<a class="ui huge green button" href="https://spectra.eng.pdn.ac.lk/" target="_blank"
+							style="display: block;">Team Spectra <i class="right external square alternate icon"></i>
+						</a>
+
 
 					</div>
 
@@ -309,14 +316,16 @@
 									<div class="description">
 
 										<div class="ui message">
-											<i class="ui info icon"></i> A full workstation. Leaves headroom for a future <br> dual 3090 Ti - NVLinked setup and
+											<i class="ui info icon"></i> A full workstation. Leaves headroom for a
+											future <br> dual 3090 Ti - NVLinked setup and
 											memory upgrades.
 										</div>
 
 										<div class="ui large vertical basic labels">
 											<div class="ui basic label">ARCTIC Liquid Freezer II 360 mm CPU Cooler</div>
 											<div class="ui basic label">MSI MAG Z790 TOMAHAWK WIFI Motherboard</div>
-											<div class="ui basic label">G.Skill Trident Z5 32 GB (2x16 GB) DDR5-6000 Memory</div>
+											<div class="ui basic label">G.Skill Trident Z5 32 GB (2x16 GB) DDR5-6000
+												Memory</div>
 											<div class="ui basic label">Samsung 970 Evo Plus 2 TB M.2 SSD</div>
 											<div class="ui basic label">Corsair HX1200 Platinum 1200 W PSU</div>
 											<div class="ui basic label">Lian Li PC-O11 Dynamic ATX Full-Tower Case</div>
@@ -497,6 +506,77 @@
 
 		</div>
 
+		<div id="raffle" class="ui vertical stripe segment">
+
+			<div class="ui centered grid container">
+
+				<div class="row">
+					<div class="center aligned column">
+						<h1 class="ui segment-header header">Stand a chance to win Warhammer 40,000: Darktide - Imperial
+							Edition!</h1>
+					</div>
+				</div>
+
+				<div class="ui centered grid">
+					<div class="ui text container">
+						<p>Every donation gives you a chance to win a Steam promo code for <a target="_blank"
+								href="https://store.steampowered.com/app/1981790/Warhammer_40000_Darktide__Imperial_Edition/">Warhammer
+								40,000: Darktide - Imperial Edition</a> worth $60!</p>
+					</div>
+					<img class="ui image" src="assets/images/darktide.jpg" style="margin-top: 10px;">
+					<div class="ui segment">
+						<h3 class="ui header">Conditions</h3>
+						<div class="ui ordered list">
+							<div class="item">Every donor receives at least one chance to win</div>
+							<table class="ui celled table">
+								<thead>
+									<tr>
+										<th>Amount</th>
+										<th>No. of chances</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>$0 - $100</td>
+										<td>1 chance for every $20 (rounded up to nearest multiple of $20)</td>
+									</tr>
+									<tr>
+										<td>$100 - $500</td>
+										<td>1 chance for every $50 (rounded up to nearest multiple of $50)</td>
+									</tr>
+									<tr>
+										<td>$500 - $1000</td>
+										<td>1 chance for every $100 (rounded up to nearest multiple of $100)</td>
+									</tr>
+								</tbody>
+							</table>
+							
+							<div class="item">Organizers will not be included in the raffle</div>
+							<div class="item">The winner will be contacted after the end of the fundraiser</div>
+						</div>
+						<a class="ui link" id="launch-fundraiser-modal"><i
+							class="info circle icon"></i>Conditions to be able to use the promo code</a>
+
+						<div id="fundraiser-modal" class="ui modal">
+							<div class="header">Conditions to be able to use the Darktide promo code</div>
+							<div class="content">
+								<div class="ui bulleted list">
+									<div class="item">You must have a GeForce Experience and a Steam account</div>
+									<div class="item">Have a qualifying GPU: RTX 3090 Ti, 3080 Ti, 3070 Ti, 3070, 3060 Ti</div>
+									<div class="item">Code must be redeemed by Janurary 9th, 2023</div>
+									<div class="item">Must be in one of the following regions: US, EMEA, APAC (excl. Hong Kong, China)</div>
+									<div class="item">For more details and redemption instructions: Please refer to <a
+											href="https://www.nvidia.com/en-us/geforce/campaigns/pc-game-bundle-warhammer-40000-darktide-imperial-edition/redemption-instructions">this</a>.
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
 
 		<div id="updates" class="ui vertical stripe segment">
 
@@ -517,6 +597,15 @@
 							<div class="ui segment" style="height: 100%;">
 								<div class="ui feed">
 									<div class="current event">
+										<div class="content">
+											<div class="date">
+												November 20, 2022 </div>
+											<div class="summary">
+												<p>We added a <a href="#raffle">raffle</a> for Warhammer Darktide 40k: Imperial Edition.</p>
+											</div>
+										</div>
+									</div>
+									<div class="event">
 										<div class="content">
 											<div class="date">
 												November 17, 2022 </div>
