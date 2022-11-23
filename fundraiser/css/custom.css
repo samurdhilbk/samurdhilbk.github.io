@@ -84,6 +84,19 @@ html{
   100% { transform:translate(0,1px); opacity: 0; }
 }
 
+/* .ui.steps .disabled.step, .ui.steps .disabled.step .description, .ui.steps .disabled.step .title {
+  color: rgba(40,40,40,.3) !important;
+} */
+
+.overlay-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(161 161 161 / 60%);
+  z-index: 1;
+}
 
 .done.step{
   background-color: #fcfff5 !important;
