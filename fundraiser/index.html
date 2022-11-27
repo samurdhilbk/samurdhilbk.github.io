@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 	<!-- Site Properties -->
-	<title>Fundraiser for Pera COM</title>
+	<title>Fundraiser for Pera Engineering</title>
 	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 
@@ -29,9 +29,13 @@
 					$('#fundraiser-modal').modal('show');
 				});
 
+				$("#launch-fundraiser-cod-mw2-modal").click(function () {
+					$('#fundraiser-cod-mw2-modal').modal('show');
+				});
+
 				$('#progress').progress({
 					text: {
-						active: '{percent}% Funded (${value}). 13 days remaining.'
+						active: '{percent}% Funded (${value}). 10 days remaining.'
 					}
 				});
 
@@ -114,9 +118,9 @@
 					Help acquire GPU resources for Pera engineering
 				</h1>
 				<div class="ui basic segment">
-					<div id="progress" class="ui indicating progress" data-value="3111" data-total="4000">
+					<div id="progress" class="ui indicating progress" data-value="3199" data-total="4000">
 						<div class="bar"></div>
-						<div class="label" style="color: white">{percent}% Funded. 13 days remaining.</div>
+						<div class="label" style="color: white">{percent}% Funded. 10 days remaining.</div>
 					</div>
 					<a href="#updates" class="ui inverted basic button">See updates <i class="right icon"><i
 								id="down-arrow" class="down chevron circle icon"></i></i></a>
@@ -126,8 +130,8 @@
 				<a class="ui huge primary button" href="#contribute">Donate<i class="right arrow icon"></i></a>
 
 				<div class="ui basic segment">
-				<a href="#raffle" class="ui inverted blue button">Every donor has a chance to win Warhammer Darktide 40k!<i class="right icon"><i
-					id="down-arrow" class="down chevron circle icon"></i></i></a>
+					<a href="#raffle" class="ui inverted blue button">Every donor has a chance to win Warhammer Darktide
+						40k!<i class="right icon"><i id="down-arrow" class="down chevron circle icon"></i></i></a>
 				</div>
 			</div>
 
@@ -300,8 +304,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="completed step">
-								<img class="ui tiny image" src="assets/images/four.png">
+							<div class="completed done step">
+								<img class="ui tiny image" src="assets/images/accept.png">
 								<div class="content">
 									<div class="title">
 										<div class="ui horizontal statistic">
@@ -375,7 +379,7 @@
 
 										<div class="ui message">
 											<i class="ui info icon"></i> Dual 3090 Ti - NVLinked (SLI) setup. <br> plus
-											more case fans for better cooling. 
+											more case fans for better cooling.
 										</div>
 
 										<div class="ui large vertical basic labels">
@@ -564,19 +568,58 @@
 
 				<div class="row">
 					<div class="center aligned column">
-						<h1 class="ui segment-header header">Stand a chance to win Warhammer 40,000: Darktide - Imperial
-							Edition!</h1>
+						<h1 class="ui segment-header header">Stand a chance to win two new PC games!</h1>
 					</div>
 				</div>
 
 				<div class="ui centered grid">
 					<div class="ui text container">
-						<p>Every donation gives you a chance to win a Steam promo code for <a target="_blank"
-								href="https://store.steampowered.com/app/1981790/Warhammer_40000_Darktide__Imperial_Edition/">Warhammer
-								40,000: Darktide - Imperial Edition</a> worth $60!</p>
+						<p>Every donation gives you a chance to win one of two PC games!</p>
 					</div>
-					<img class="ui image" src="assets/images/darktide.jpg" style="margin-top: 10px;">
-					<div class="ui segment">
+
+					<div class="ui centered grid" style="margin-top: 10px;">
+						<div class="column">
+							<div class="ui fluid card" style="text-align: center;">
+								<div class="content">
+									<div class="header">Prize 1: Worth $70</div>
+								</div>
+								<a class="image" target="_blank" href="https://www.callofduty.com/modernwarfare2">
+									<img style="max-width: 600px;" src="assets/images/cod-mw2-remastered-min.jpg">
+								</a>
+								<div class="content">
+									<a class="header" href="#">Call of Duty: Modern Warfare II</a>
+									<div class="meta">
+										<a class="ui link" id="launch-fundraiser-cod-mw2-modal"><i class="info circle icon"></i>&nbsp; Conditions to be
+											able to redeem this code</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ui centered grid">
+						<div class="column">
+							<div class="ui fluid card" style="text-align: center;">
+								<div class="content">
+									<div class="header">Prize 2: Worth $60</div>
+								</div>
+								<a class="large image" href="https://store.steampowered.com/app/1981790/Warhammer_40000_Darktide__Imperial_Edition/">
+									<img style="max-width: 600px;" src="assets/images/darktide.jpg">
+								</a>
+								<div class="content">
+									<a class="header" href="#">Warhammer
+										40,000: Darktide - Imperial Edition</a>
+									<div class="meta">
+										<a class="ui link" id="launch-fundraiser-modal"><i class="info circle icon"></i>&nbsp; Conditions to be
+											able to redeem this Steam code</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="ui segment" style="margin-top: 50px;">
 						<h3 class="ui header">Conditions</h3>
 						<div class="ui ordered list">
 							<div class="item">Every donor receives at least one chance to win</div>
@@ -602,21 +645,30 @@
 									</tr>
 								</tbody>
 							</table>
-							
+
 							<div class="item">Organizers will not be included in the raffle</div>
 							<div class="item">The winner will be contacted after the end of the fundraiser</div>
 						</div>
-						<a class="ui link" id="launch-fundraiser-modal"><i
-							class="info circle icon"></i>Conditions to be able to use the promo code</a>
+						
+						<div id="fundraiser-cod-mw2-modal" class="ui modal">
+							<div class="header">Conditions to be able to use the COD MW2 code</div>
+							<div class="content">
+								<div class="ui bulleted list">
+									<div class="item">Code must be redeemed by Janurary 31st, 2023</div>
+								</div>
+							</div>
+						</div>
 
 						<div id="fundraiser-modal" class="ui modal">
 							<div class="header">Conditions to be able to use the Darktide promo code</div>
 							<div class="content">
 								<div class="ui bulleted list">
 									<div class="item">You must have a GeForce Experience and a Steam account</div>
-									<div class="item">Have a qualifying GPU: RTX 3090 Ti, 3080 Ti, 3070 Ti, 3070, 3060 Ti</div>
+									<div class="item">Have a qualifying GPU: RTX 3090 Ti, 3080 Ti, 3070 Ti, 3070, 3060
+										Ti</div>
 									<div class="item">Code must be redeemed by Janurary 9th, 2023</div>
-									<div class="item">Must be in one of the following regions: US, EMEA, APAC (excl. Hong Kong, China)</div>
+									<div class="item">Must be in one of the following regions: US, EMEA, APAC (excl.
+										Hong Kong, China)</div>
 									<div class="item">For more details and redemption instructions: Please refer to <a
 											href="https://www.nvidia.com/en-us/geforce/campaigns/pc-game-bundle-warhammer-40000-darktide-imperial-edition/redemption-instructions">this</a>.
 									</div>
@@ -651,9 +703,20 @@
 									<div class="current event">
 										<div class="content">
 											<div class="date">
+												November 26, 2022 </div>
+											<div class="summary">
+												<p>We reached milestone 4. Thanks for your donations. Keep them coming!
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="event">
+										<div class="content">
+											<div class="date">
 												November 20, 2022 </div>
 											<div class="summary">
-												<p>We added milestones 5 (active) and 6 (planned). Our plan is to add a second GPU. Milestone
+												<p>We added milestones 5 (active) and 6 (planned). Our plan is to add a
+													second GPU. Milestone
 													5 adds headroom for the GPU purchase in milestone 6.
 												</p>
 											</div>
@@ -664,7 +727,8 @@
 											<div class="date">
 												November 20, 2022 </div>
 											<div class="summary">
-												<p>We added a <a href="#raffle">raffle</a> for Warhammer Darktide 40k: Imperial Edition.</p>
+												<p>We added a <a href="#raffle">raffle</a> for Warhammer Darktide 40k:
+													Imperial Edition.</p>
 											</div>
 										</div>
 									</div>
